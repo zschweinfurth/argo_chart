@@ -5,6 +5,7 @@
 argo-cd:
   crds:
     keep: false
+  createAggregateRoles: true
   dex:
     enabled: false
   server:

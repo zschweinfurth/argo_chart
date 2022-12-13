@@ -14,6 +14,8 @@ spec:
     repoURL: https://github.com/zschweinfurth/spark_k8s
     targetRevision: HEAD
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true

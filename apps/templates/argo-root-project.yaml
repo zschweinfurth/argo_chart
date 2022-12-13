@@ -7,13 +7,15 @@ metadata:
 spec:
   destination:
     server: https://kubernetes.default.svc
-    namespace: default
+    namespace: argo-cd
   project: default
   source:
     path: chart/
     repoURL: https://github.com/zschweinfurth/argo_chart
     targetRevision: HEAD
   syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
     automated:
       prune: true
       selfHeal: true
